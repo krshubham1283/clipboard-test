@@ -20,24 +20,24 @@ You will be graded on the level of detail in each ticket, the clarity of the exe
 With the assumption that same agent can work in different facilities
 
 Task-1:
-1. Create a new DB Table AgentFacilityMapping with columns facility_id, agent_id, custom_agent_id also create a unique composite index on facility_id and custom_agent_id.
-Estimate: Half day
-Acceptance: New table in all the environment(dev/staging/prod) with the required indexes.
+1. Create a new DB Table AgentFacilityMapping with columns facility_id, agent_id, custom_agent_id also create a unique composite index on facility_id and custom_agent_id. 
+   - Estimate: Half day
+   - Acceptance: New table in all the environment(dev/staging/prod) with the required indexes.
 
 Task-2:
-In generate report need to update the functionality need to add the functionality
-1. Crate a map of internal id and custom id for all the agent for whom reports are generated from the table "AgentFacilityMapping".
-2. Replace agent id with custom id in the report for the institute.
-Estimate: Half day
-Acceptance: Generate report should have the custom_id given by the facility.
+In generate report need to update the functionality
+1. Create a map of internal id and custom id for all the agent for whom reports are generated from the table "AgentFacilityMapping".
+2. Replace agent id with custom id in the report for the institute. 
+   - Estimate: Half day
+   - Acceptance: Generate report should have the custom_id given by the facility.
 
 Task-3:
 1. Custom Ids of existing agents to be added in the database
-Estimate: Business team can provide
-Acceptance: Structured data in csv with information (facility_id, agent_id, custom_agent_id)
+   - Estimate: Business team can provide
+   - Acceptance: Structured data in csv with information (facility_id, agent_id, custom_agent_id)
 
 Task-4:
 1. Script to fill data of existing agent in the table.
-Estimate: Half day
-Acceptance: One time script to run save data in DB. Scripts updates should be atomic and idempotent on DB call. If script run multiple time it should not corrupt the data.
+   - Estimate: One day
+   - Acceptance: One time script to run save data in DB. Scripts updates should be atomic and idempotent on DB call. If script run multiple time it should not corrupt the data.
 
